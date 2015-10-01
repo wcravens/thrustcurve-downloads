@@ -16,7 +16,32 @@ Basic demonstration of search query.
 
 ## 1. Get a list of Manfuacturers 
 
-Start with the list of [manufacturers](http://www.thrustcurve.org/mfrsearch.jsp)
+Get a the list of Manufacturers and other potential search criteria.
+
+    POST http://www.thrustcurve.org/servlets/metadata 
+    <metadata-request/>
+
+    ...
+    <manufacturers>
+        <manufacturer abbrev="AeroTech">AeroTech</manufacturer>
+        ...
+    </manufacturers>
+   <cert-orgs>
+        <cert-org abbrev="TRA">Tripoli Rocketry Association, Inc.</cert-org>
+        ...
+    </cert-orgs>
+    <types>
+        <type>hybrid</type>
+        ...
+    </types>
+    <diameters>
+        <diameter>6</diameter>
+        ...
+    </diameters>
+    <impulse-classes>
+        <impulse-class>A</impulse-class>
+        ...
+    </impulse-classes>
 
 ## 2. Get a list of the motors for each manufacturer
 
